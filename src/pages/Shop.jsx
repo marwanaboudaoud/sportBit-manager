@@ -16,7 +16,9 @@ export const ShopPage = () => {
                 />
                 <h2> Shop</h2>
             </div>
-            <hr / >
+            <hr className="mt-2"  style={{ 
+                height: "20px",
+            }}  />
         </div>
     )
 }

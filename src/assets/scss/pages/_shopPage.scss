@@ -3,4 +3,10 @@
         font-size: 1.875rem;
     }
 
+    hr{
+        border: none;
+        border-top: 2px solid $gray-dark; 
+        opacity: 0.3; 
+    }
+
 }
