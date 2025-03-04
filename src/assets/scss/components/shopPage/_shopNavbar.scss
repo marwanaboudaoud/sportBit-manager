@@ -1,0 +1,12 @@
+.shop-navbar{
+    li a {
+        padding: 11px 13px;
+        outline: none;
+    }
+
+    .active-link {
+        background-color: $primary;
+        color: $black !important; 
+        border-radius: 4px;
+      }
+}

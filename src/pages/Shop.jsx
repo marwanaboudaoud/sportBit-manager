@@ -1,6 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import ShopPageNav from '../components/shopPage/ShopPageNav';
+import Productgroepen from '../components/shopPage/Productgroepen';
+import Abonnementen from '../components/shopPage/Abonnementen';
+import Artikelen from '../components/shopPage/Artikelen';
+import Kortingscodes from '../components/shopPage/Kortingscodes';
+import Rittenkaarten from '../components/shopPage/Rittenkaarten';
 
 export const ShopPage = () => {
     return (
@@ -16,10 +23,23 @@ export const ShopPage = () => {
                 />
                 <h2> Shop</h2>
             </div>
-            <hr className="mt-2"  style={{ 
-                height: "20px",
-            }}  />
-        </div>
-    )
-}
 
+            <hr className="mt-2" style={{
+                height: "20px",
+            }} />
+
+            <ShopPageNav />
+
+            <div className="mt-4">
+                <Routes>
+                    <Route path="/" element={<Navigate to="productgroepen" replace />} />
+                    <Route path="productgroepen" element={<Productgroepen />} />
+                    <Route path="abonnementen" element={<Abonnementen />} />
+                    <Route path="rittenkaarten" element={<Rittenkaarten />} />
+                    <Route path="artikelen" element={<Artikelen />} />
+                    <Route path="kortingscodes" element={<Kortingscodes />} />
+                </Routes>
+            </div>
+        </div>
+    );
+};
