@@ -8,6 +8,7 @@ import Abonnementen from '../components/shopPage/Abonnementen';
 import Artikelen from '../components/shopPage/Artikelen';
 import Kortingscodes from '../components/shopPage/Kortingscodes';
 import Rittenkaarten from '../components/shopPage/Rittenkaarten';
+import InsertDiscountCode from '../components/shopPage/InsertDiscountCode';
 
 export const ShopPage = () => {
     return (
@@ -38,6 +39,7 @@ export const ShopPage = () => {
                     <Route path="rittenkaarten" element={<Rittenkaarten />} />
                     <Route path="artikelen" element={<Artikelen />} />
                     <Route path="kortingscodes" element={<Kortingscodes />} />
+                    <Route path="kortingscodes/new" element={<InsertDiscountCode />} />
                 </Routes>
             </div>
         </div>

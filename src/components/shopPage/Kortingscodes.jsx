@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
 import KortingCards from './KortingCard';
+import { useNavigate } from 'react-router-dom';
 
 const Kortingscodes = () => {
+    const navigate = useNavigate();
     const [showInactive, setShowInactive] = useState(false);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
@@ -107,6 +109,10 @@ const Kortingscodes = () => {
         }
     };
 
+    const handleNewDiscountCode = () => {
+        navigate('/shop/kortingscodes/new');
+    };
+
     return (
         <div className="kortingscodes-container">
             <div className="kortingscodes-wrapper">
@@ -170,6 +176,7 @@ const Kortingscodes = () => {
                                 className="btn btn-secondary"
                                 type="button"
                                 style={{ padding: '14px 20px', height: '50px' }}
+                                onClick={handleNewDiscountCode}
                             >
                                 <FontAwesomeIcon icon={faPlus} className="me-2 search-icon" />
                                 <span className='search-text'>Nieuwe kortingscode</span>
