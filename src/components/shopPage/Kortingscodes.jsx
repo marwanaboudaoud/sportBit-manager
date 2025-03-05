@@ -120,7 +120,7 @@ const Kortingscodes = () => {
                 <hr className="mb-4" />
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="kortingscodes-form-container d-flex flex-wrap align-items-center">
-                        <div className="kortingscodes-select-container mb-3 mb-lg-0">
+                        <div className="kortingscodes-select-container mb-3 mb-xl-0">
                             <select
                                 className="form-select custom-select-input"
                                 value={sortOption}
@@ -131,7 +131,7 @@ const Kortingscodes = () => {
                                 <option value="date">Sorteer op geldig van datum</option>
                             </select>
                         </div>
-                        <div className="kortingscodes-search-container mb-3 mb-lg-0">
+                        <div className="kortingscodes-search-container mb-3 mb-xl-0">
                             <div className="input-group">
                                 <input
                                     type="text"
@@ -142,7 +142,7 @@ const Kortingscodes = () => {
                                     onKeyDown={handleKeyDown} 
                                 />
                                 <button
-                                    className="btn btn-secondary"
+                                    className="btn btn-secondary search-button"
                                     type="button"
                                     onClick={handleSearchClick}
                                 >
@@ -151,7 +151,7 @@ const Kortingscodes = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="kortingscodes-checkbox-container mb-3 mb-lg-0">
+                        <div className="kortingscodes-checkbox-container mb-3 mb-xl-0">
                             <div className="form-check custom-checkbox">
                                 <input
                                     className="form-check-input me-4"

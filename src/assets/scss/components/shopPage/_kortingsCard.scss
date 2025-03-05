@@ -1,6 +1,8 @@
 .korting-cards-container {
     padding: 39px 47px 26px 41px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 
     .card {
         width: 295px;
@@ -50,5 +52,21 @@
         border: 2px dashed $black-translucent;
         border-radius: 4px;
         padding: 12px 24px
+    }
+
+    
+}
+
+@media (max-width: 1200px) {
+    .korting-cards-container > div {
+        flex: 1 1 calc(50% - 0.5rem);
+        max-width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .korting-cards-container > div {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }

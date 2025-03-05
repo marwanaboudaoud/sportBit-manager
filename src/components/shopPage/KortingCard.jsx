@@ -13,7 +13,7 @@ const KortingCards = ({
     onDelete
 }) => {
     return (
-        <div className="card p-0 ms-2">
+        <div className="card p-0 ms-2 mb-2">
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <div className="d-flex align-items-center justify-content-center">

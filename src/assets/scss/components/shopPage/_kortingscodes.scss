@@ -2,6 +2,9 @@
     border: 1px solid $gray-muted;
     border-radius: 4px;
     padding-bottom: 95px;
+    .search-button{
+        width: 116px;
+    }
 
     .kortingscodes-wrapper {
         padding: 39px 47px 26px 41px;
@@ -9,11 +12,11 @@
         border-radius: 4px 4px 0px 0px;
         border: 1px solid $gray-muted;
 
-        @media screen and ($lg) {
+        @media (max-width: 992px) {
             padding: 25px;
         }
 
-        @media screen and ($sm) {
+        @media (max-width: 576px) {
             padding: 15px;
         }
 
@@ -38,12 +41,10 @@
             border: none;
         }
 
-        // Make form container have proper spacing on mobile
-        .kortingscodes-form-container {
-            gap: 15px;
-
-            @media screen and ($lg) {
+        .kortingscodes-form-container {            
+            @media (max-width: 1200px) { 
                 width: 100%;
+                flex-direction: column;
             }
         }
 
@@ -51,7 +52,7 @@
         .kortingscodes-search-container,
         .kortingscodes-checkbox-container,
         .kortingscodes-button-container {
-            @media screen and ($lg) {
+            @media (max-width: 1200px) { 
                 width: 100%;
             }
         }
@@ -69,7 +70,7 @@
                 font-weight: 400;
             }
 
-            @media screen and ($lg) {
+            @media (max-width: 1200px) {
                 width: 100%;
             }
         }
@@ -79,22 +80,30 @@
         }
 
         .custom-search-input {
-            width: 332px;
+            width: 215px;
             height: 50px;
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border: 1px solid $gray-muted;
             border-radius: 4px;
             opacity: 1;
 
-            // Black placeholder text
             &::placeholder {
                 color: $black;
                 font-size: 14px;
                 font-weight: 400;
             }
 
-            @media screen and ($lg) {
-                width: 100%;
+            @media (max-width: 1200px) { 
+                width: calc(100% - 80px); 
+            }
+        }
+
+
+        .kortingscodes-search-container .input-group {
+            flex-wrap: nowrap !important;
+            
+            button {
+                white-space: nowrap;
             }
         }
 
@@ -106,6 +115,10 @@
         .search-text {
             font-size: 14px;
             font-weight: bold;
+            
+            @media (max-width: 576px) {
+                display: none; 
+            }
         }
 
         .form-check-label {
@@ -114,8 +127,6 @@
         }
 
         .custom-checkbox {
-
-            // Hide the default checkbox
             .form-check-input {
                 width: 26px;
                 height: 26px;
@@ -143,31 +154,33 @@
         }
 
         .kortingscodes-search-container {
+            margin-right: 44px;
+            margin-top: 0px;
             margin-left: 12px;
 
             .form-control:focus {
                 box-shadow: none;
-
             }
 
-            @media screen and ($lg) {
+            @media (max-width: 1200px) { 
                 margin-left: 0;
+                margin-right: 0;
             }
         }
 
         .kortingscodes-checkbox-container {
             margin-left: 0px;
             margin-top: 10px;
-
-            @media screen and ($xl) {
-                margin-left: 44px;
+            
+            @media (min-width: 1200px) {
                 margin-top: 0px;
             }
         }
 
         .kortingscodes-button-container {
-            @media screen and ($lg) {
+            @media (max-width: 1200px) { 
                 width: 100%;
+                order: 4; 
 
                 button {
                     width: 100%;
@@ -177,3 +190,5 @@
         }
     }
 }
+
+
