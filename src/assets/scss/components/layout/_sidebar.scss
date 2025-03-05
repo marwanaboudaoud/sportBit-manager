@@ -5,7 +5,7 @@
     width: 137px;
     height: 100vh;
     padding-top: 63px;
-    border: 1px black solid;
+    border-right: 1px $gray-muted solid;
 
     .active-link {
         background-color: $primary;

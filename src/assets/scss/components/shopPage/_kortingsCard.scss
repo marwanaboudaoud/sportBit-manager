@@ -1,0 +1,54 @@
+.korting-cards-container {
+    padding: 39px 47px 26px 41px;
+    text-align: center;
+
+    .card {
+        width: 295px;
+        height: 261px;
+        border: 1px solid #0000003B;
+    }
+
+    .card-body {
+        padding: 54px 37px 0px 37px;
+
+        .badge {
+            padding: 4px 11px;
+            margin-right: 12px;
+        }
+
+        .expiry-date,
+        .until {
+            font-size: 14px;
+        }
+    }
+
+    .card-footer-custom {
+        background-color: #EDEDED;
+        border: 1px solid #DCDCDC;
+        margin-top: auto;
+
+        .deal-name {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .trash-button {
+            color: $black; 
+            
+            &:hover {
+                color: $red; 
+            }
+        }
+    }
+
+    h5 {
+        font-size: 27px;
+        background: $gray-light 0% 0% no-repeat padding-box;
+        border: 2px dashed $black-translucent;
+        border-radius: 4px;
+        padding: 12px 24px
+    }
+}

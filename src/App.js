@@ -11,8 +11,10 @@ function App() {
         <TopNavbar />
         <div className="d-flex">
           <Sidebar />
-          <div className="content" style={{ marginLeft: '212px', marginTop: '78px', width: '100%' , paddingRight:'81px' }}>
-            <AppRoutes />
+          <div className="content-wrapper" style={{ marginLeft: '250px', width: 'calc(100% - 250px)' }}>
+            <div className="content p-4">
+              <AppRoutes />
+            </div>
           </div>
         </div>
       </div>

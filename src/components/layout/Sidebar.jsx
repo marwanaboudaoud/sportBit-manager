@@ -24,7 +24,7 @@ export const Sidebar = () => {
   const navItems = [
     { path: '/management', icon: faChartPie, label: 'Management', iconWidth: '24px', iconHeight: '23px' },
     { path: '/administration', icon: faFileText, label: 'Administratie', iconWidth: '17px', iconHeight: '22px' },
-    { path: '/administration', icon: faCalendarDays, label: 'Administratie', iconWidth: '21px', iconHeight: '24px' },
+    { path: '/calender', icon: faCalendarDays, label: 'Administratie', iconWidth: '21px', iconHeight: '24px' },
     { path: '/shop', icon: faCartShopping, label: 'Shop', iconWidth: '27px', iconHeight: '24px' },
     { path: '/communication', icon: faComments, label: 'Communicatie', iconWidth: '27px', iconHeight: '24px' },
     { path: '/club-management', icon: faWarehouse, label: 'Clubbeheer', iconWidth: '30px', iconHeight: '24px' },
