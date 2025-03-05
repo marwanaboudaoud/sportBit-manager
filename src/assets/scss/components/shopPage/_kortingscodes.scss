@@ -22,6 +22,10 @@
             color: black;
         }
 
+        .form-select {
+            box-shadow: none;
+        }
+
         .kortingscodes-description {
             font-size: 14px;
             color: black;
@@ -140,6 +144,11 @@
 
         .kortingscodes-search-container {
             margin-left: 12px;
+
+            .form-control:focus {
+                box-shadow: none;
+
+            }
 
             @media (max-width: 992px) {
                 margin-left: 0;
