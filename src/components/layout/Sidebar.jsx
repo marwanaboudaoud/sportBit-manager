@@ -20,7 +20,6 @@ export const Sidebar = () => {
            (path !== '/' && location.pathname.startsWith(path));
   };
 
-  // Define navigation items with custom icon sizes
   const navItems = [
     { path: '/management', icon: faChartPie, label: 'Management', iconWidth: '24px', iconHeight: '23px' },
     { path: '/administration', icon: faFileText, label: 'Administratie', iconWidth: '17px', iconHeight: '22px' },

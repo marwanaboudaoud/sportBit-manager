@@ -1,5 +1,125 @@
-.insert-discount-code{
-    .title-container{
-        
+.insert-discount-code {
+    border: 1px solid $gray-muted;
+
+    .title-container {
+        background-color: $gray-cool;
+        padding: 45px 41px
     }
+    .information-header , .settings-header {
+       border-bottom: 1px solid $gray-dark;
+       padding-bottom: 18px;
+       margin-bottom: 42px;
+    }
+
+    .type-discount-container {
+
+        border-bottom: 1px solid $gray-dark;
+        padding-bottom: 22px;
+        margin-bottom: 23px;
+    }
+
+    input , select {
+        width: 291px;
+        height: 36px;
+        border: 1px solid $gray-transparent-55;
+        &:focus {
+            box-shadow: none;
+            border: 1px solid $gray-transparent-55;
+        }
+    }
+
+
+    textarea {
+        width: 291px;
+        height: 149px;
+
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .first-number-input {
+        padding: 12px 7px;
+        width: 58px;
+
+    }
+
+    .second-number-input {
+        padding: 12px 7px;
+        width: 38px;
+
+    }
+
+    .number-of-use-input {
+        width: 54px;
+        margin-left: 41px;
+
+    }
+
+    .first-number-input::-webkit-outer-spin-button,
+    .first-number-input::-webkit-inner-spin-button,
+    .second-number-input::-webkit-outer-spin-button,
+    .second-number-input::-webkit-inner-spin-button,
+    .number-of-use-input::-webkit-outer-spin-button,
+    .number-of-use-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .first-number-input[type=number],
+    .second-number-input[type=number],
+    .number-of-use-input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .settings-forms {
+        background-color: $gray-lighter;
+        margin-bottom: 35px;
+        padding: 28px 26px;
+
+        input {
+            margin-bottom: 22px;
+        }
+    }
+
+    .information-form input {
+        margin-bottom: 10px;
+    }
+
+    .optinal {
+        color: $black-transparent-40;
+    }
+
+    .placeholder-italic::placeholder {
+        font: italic normal normal 14px/20px Roboto;
+        opacity: 0.7;
+        white-space: pre-line;
+    }
+
+    .checkbox {
+        appearance: none;
+        border: 2px solid black;
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin-left:88px;
+        &:focus {
+            box-shadow: none;
+            border: 1px solid $gray-transparent-55;
+        }
+      }
+      
+      .checkbox:checked {
+        background-color: black;
+        border-color: black;
+      }
+      
+      .refresh-icon{
+        top: 8px;
+        right: 8px;
+      }
+      
+
 }
