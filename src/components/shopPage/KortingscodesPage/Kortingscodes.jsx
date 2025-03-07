@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
 import KortingCards from '../KortingCard';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Kortingscodes = () => {
-    const navigate = useNavigate();
     const [showInactive, setShowInactive] = useState(false);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
@@ -108,10 +106,6 @@ const Kortingscodes = () => {
             e.preventDefault();
             handleSearchClick(); 
         }
-    };
-
-    const handleNewDiscountCode = () => {
-        navigate('/shop/kortingscodes/new');
     };
 
     return (

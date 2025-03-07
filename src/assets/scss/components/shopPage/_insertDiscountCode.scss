@@ -3,7 +3,7 @@
 
     .title-container {
         background-color: $gray-cool;
-        padding: 45px 41px
+        padding: 45px 41px;
     }
 
     .information-header,
@@ -14,7 +14,6 @@
     }
 
     .type-discount-container {
-
         border-bottom: 1px solid $gray-dark;
         padding-bottom: 22px;
         margin-bottom: 23px;
@@ -51,7 +50,6 @@
             box-shadow: none;
             border: 2px solid $gray-medium;
         }
-
     }
 
     label {
@@ -84,7 +82,8 @@
         -webkit-appearance: none;
         margin: 0;
     }
-    .settings-forms-container{
+
+    .settings-forms-container {
         width: 539px;
     }
 
@@ -130,22 +129,18 @@
         background-color: black;
         border-color: black;
     }
-
     .refresh-icon-container {
         top: 4px;
         right: 8px;
 
-
         .refresh-icon {
             width: 12px;
-            height: 12px
+            height: 12px;
         }
     }
-
     .cancel-button {
-        text-decoration: none
+        text-decoration: none;
     }
-
     .button {
         padding: 14px 36px;
     }
