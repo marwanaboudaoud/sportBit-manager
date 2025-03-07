@@ -57,14 +57,14 @@
     
 }
 
-@media (max-width: 1200px) {
+@media screen and ($xl-reverse) {
     .korting-cards-container > div {
         flex: 1 1 calc(50% - 0.5rem);
         max-width: calc(50% - 0.5rem);
     }
 }
 
-@media (max-width: 992px) {
+@media screen and ($lg-reverse) {
     .korting-cards-container > div {
         flex: 1 1 100%;
         max-width: 100%;

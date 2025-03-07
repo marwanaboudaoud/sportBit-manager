@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import KortingCards from './KortingCard';
+import KortingCards from '../KortingCard';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Kortingscodes = () => {
     const navigate = useNavigate();
@@ -148,7 +149,7 @@ const Kortingscodes = () => {
                                     onKeyDown={handleKeyDown} 
                                 />
                                 <button
-                                    className="btn btn-secondary search-button"
+                                    className="button button-primary search-button"
                                     type="button"
                                     onClick={handleSearchClick}
                                 >
@@ -172,15 +173,14 @@ const Kortingscodes = () => {
                             </div>
                         </div>
                         <div className="kortingscodes-button-container ms-lg-auto">
-                            <button
-                                className="btn btn-secondary"
+                            <Link to="/shop/kortingscodes/new"
+                                className="button button-primary new-code-button"
                                 type="button"
-                                style={{ padding: '14px 20px', height: '50px' }}
-                                onClick={handleNewDiscountCode}
                             >
+                                
                                 <FontAwesomeIcon icon={faPlus} className="me-2 search-icon" />
                                 <span className='search-text'>Nieuwe kortingscode</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </form>

@@ -1,0 +1,36 @@
+.button {
+    border: none;
+    padding: 14px 20px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 4px;
+    
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    &:active {
+        transform: scale(0.98);
+    }
+    
+    &.button-primary {
+        background-color: $secondary;
+        color: $black;
+        
+        &:hover {
+            background-color: $primary;
+        }
+    }
+    
+    &.button-cancel {
+        background-color: $gray-lighter ;
+        color: $black ;
+        
+        &:hover {
+            background-color: $gray-dark;
+        }
+    }
+}

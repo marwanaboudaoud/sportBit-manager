@@ -6,9 +6,9 @@ import ShopPageNav from '../components/shopPage/ShopPageNav';
 import Productgroepen from '../components/shopPage/Productgroepen';
 import Abonnementen from '../components/shopPage/Abonnementen';
 import Artikelen from '../components/shopPage/Artikelen';
-import Kortingscodes from '../components/shopPage/Kortingscodes';
+import Kortingscodes from '../components/shopPage/KortingscodesPage/Kortingscodes';
 import Rittenkaarten from '../components/shopPage/Rittenkaarten';
-import InsertDiscountCode from '../components/shopPage/InsertDiscountCode';
+import InsertDiscountCode from '../components/shopPage/KortingscodesPage/InsertDiscountCode';
 
 export const ShopPage = () => {
     return (
