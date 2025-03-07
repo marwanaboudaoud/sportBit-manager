@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ShopPageNav from '../components/shopPage/ShopPageNav';
-import Productgroepen from '../components/shopPage/Productgroepen';
-import Abonnementen from '../components/shopPage/Abonnementen';
-import Artikelen from '../components/shopPage/Artikelen';
-import Kortingscodes from '../components/shopPage/KortingscodesPage/Kortingscodes';
-import Rittenkaarten from '../components/shopPage/Rittenkaarten';
-import InsertDiscountCode from '../components/shopPage/KortingscodesPage/InsertDiscountCode';
+import Productgroepen from '../components/shopPage/Productgroeps';
+import Abonnementen from '../components/shopPage/Subscriptions';
+import Artikelen from '../components/shopPage/Articles';
+import Kortingscodes from '../components/shopPage/DiscountCodesPage/DiscountsCodes';
+import Rittenkaarten from '../components/shopPage/TravelCards';
+import InsertDiscountCode from '../components/shopPage/DiscountCodesPage/InsertDiscountCode';
 
 export const ShopPage = () => {
     return (

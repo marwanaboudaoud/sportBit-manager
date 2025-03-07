@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import KortingCards from '../KortingCard';
+import KortingCards from '../DiscountCard';
 import { Link } from 'react-router-dom';
+import { DiscountCodesData } from './discountscodesData';
+
 
 const Kortingscodes = () => {
     const [showInactive, setShowInactive] = useState(false);
@@ -10,44 +12,7 @@ const Kortingscodes = () => {
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
     const [sortOption, setSortOption] = useState('');
    
-    const [cardsData, setCardsData] = useState([
-        {
-            id: 1,
-            title: "VRAAGROY",
-            badge: { text: "ACTIEF", variant: "green" },
-            expiryLabel: "tot",
-            expiryDate: "21-12-2024",
-            dealName: "Roy trakteert",
-            discount: "€20 Korting",
-        },
-        {
-            id: 2,
-            title: "LENTE20",
-            badge: { text: "VERLOPEN", variant: "danger" },
-            dealName: "Lentedeal",
-            discount: "€20 Korting",
-        },
-        {
-            id: 3,
-            title: "HERFST2023",
-            badge: { text: "ACTIEF", variant: "success" },
-            startDate: "10-10-2024",
-            expiryLabel: "tot",
-            expiryDate: "21-12-2024",
-            dealName: "Herfstdeal",
-            discount: "€20 Korting",
-        },
-        {
-            id: 4,
-            title: "QMNL10!",
-            badge: { text: "ACTIEF", variant: "success" },
-            startDate: "21-06-2023",
-            expiryLabel: "tot",
-            expiryDate: "21-12-2024",
-            dealName: "Herfstdeal",
-            discount: "€20 Korting",
-        }
-    ]);
+    const [cardsData, setCardsData] = useState(DiscountCodesData);
 
     let filteredCards = cardsData.filter(card =>
         showInactive ||
@@ -64,13 +29,10 @@ const Kortingscodes = () => {
         filteredCards = [...filteredCards].sort((a, b) => {
             if (!a.startDate) return 1;
             if (!b.startDate) return -1;
-           
             const [dayA, monthA, yearA] = a.startDate.split('-').map(Number);
             const [dayB, monthB, yearB] = b.startDate.split('-').map(Number);
-           
             const dateA = new Date(yearA, monthA - 1, dayA);
             const dateB = new Date(yearB, monthB - 1, dayB);
-           
             return dateA - dateB;
         });
     } else if (sortOption === 'title') {
@@ -171,7 +133,6 @@ const Kortingscodes = () => {
                                 className="button button-primary new-code-button"
                                 type="button"
                             >
-                                
                                 <FontAwesomeIcon icon={faPlus} className="me-2 search-icon" />
                                 <span className='search-text'>Nieuwe kortingscode</span>
                             </Link>
