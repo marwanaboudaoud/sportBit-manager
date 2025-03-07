@@ -1,6 +1,14 @@
 import React from "react";
 
-const DiscountTypeForm = ({ discountType, setDiscountType }) => (
+export const DiscountTypeForm = ({
+    discountType,
+    setDiscountType,
+    discountValue,
+    setDiscountValue,
+    discountCents,
+    setDiscountCents,
+    errors
+}) => (
     <div className="border rounded settings-forms">
         <div className="d-flex justify-content-between type-discount-container">
             <label className="fw-bold">Type korting</label>
@@ -16,19 +24,54 @@ const DiscountTypeForm = ({ discountType, setDiscountType }) => (
         {discountType === "Bedrag" ? (
             <div className="d-flex justify-content-between">
                 <label className="fw-bold">Kortingsbedrag</label>
-                <div className="d-flex align-items-center">
-                    <input type="number" className="form-control me-2 first-number-input" placeholder="0" max={9999} min={0} />
+                <div className="d-flex align-items-center discount-input-container">
+                    <input
+                        type="number"
+                        className={`form-control me-2 first-number-input ${errors.discountValue ? 'is-invalid' : ''}`}
+                        placeholder="0"
+                        max={9999}
+                        min={0}
+                        value={discountValue}
+                        onChange={(e) => setDiscountValue(e.target.value)}
+                    />
                     <span className="mb-3">,</span>
-                    <input type="number" className="form-control ms-2 second-number-input" placeholder="00" max={99} min={0} />
+                 
+                        <input
+                            type="number"
+                            className={`form-control ms-2 second-number-input ${errors.discountCents ? 'is-invalid' : ''}`}
+                            placeholder="00"
+                            max={99}
+                            min={0}
+                            value={discountCents}
+                            onChange={(e) => setDiscountCents(e.target.value)}
+                        />
+                        {(errors.discountValue || errors.discountCents) &&
+                            <div className="invalid-feedback d-block ms-2">
+                                {errors.discountValue || errors.discountCents}
+                            </div>
+                        }
+                    </div>
                 </div>
-            </div>
         ) : (
             <div className="d-flex justify-content-between">
                 <label className="fw-bold">Kortingspercentage</label>
-                <input type="number" className="form-control first-number-input" placeholder="0" min={0} max={100} />
+                <div className="position-relative discount-input-container">
+                    <input
+                        type="number"
+                        className={`form-control first-number-input ${errors.discountValue ? 'is-invalid' : ''}`}
+                        placeholder="0"
+                        min={0}
+                        max={100}
+                        value={discountValue}
+                        onChange={(e) => setDiscountValue(e.target.value)}
+                    />
+                    {errors.discountValue &&
+                        <div className="invalid-feedback">
+                            {errors.discountValue}
+                        </div>
+                    }
+                </div>
             </div>
         )}
     </div>
 );
-
-export default DiscountTypeForm;

@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Artikelen = () => {
+export const Artikelen = () => {
   return (
     <div>Artikelen</div>
   )
 }
 
-export default Artikelen

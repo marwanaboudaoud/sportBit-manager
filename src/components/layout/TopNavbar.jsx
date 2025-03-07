@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCircleQuestion, faGift, faBullhorn } from '@fortawesome/free-solid-svg-icons';
 
-const NavItem = ({ icon, text, href = '/', hasMargin = true }) => (
+export const NavItem = ({ icon, text, href = '/', hasMargin = true }) => (
     <li className="nav-item">
         <a className="nav-link text-white" href={href}>
             <FontAwesomeIcon 
@@ -43,4 +43,4 @@ export const TopNavbar = () => {
     );
 };
 
-export default TopNavbar;
+

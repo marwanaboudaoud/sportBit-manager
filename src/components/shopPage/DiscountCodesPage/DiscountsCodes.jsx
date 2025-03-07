@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import KortingCards from '../DiscountCard';
+import {KortingCards} from '../DiscountCard';
 import { Link } from 'react-router-dom';
 import { DiscountCodesData } from './discountscodesData';
 
 
-const Kortingscodes = () => {
+export const Kortingscodes = () => {
     const [showInactive, setShowInactive] = useState(false);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
@@ -160,4 +160,3 @@ const Kortingscodes = () => {
     );
 };
 
-export default Kortingscodes;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-const ShopPageNav = () => {
+export const ShopPageNav = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 920);
@@ -85,4 +85,3 @@ const ShopPageNav = () => {
   );
 };
 
-export default ShopPageNav;

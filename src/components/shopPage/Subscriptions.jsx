@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Abonnementen = () => {
+export const Abonnementen = () => {
   return (
     <div>Abonnementen</div>
   )
 }
-
-export default Abonnementen

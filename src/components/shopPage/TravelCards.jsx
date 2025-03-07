@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Rittenkaarten = () => {
+export const Rittenkaarten = () => {
   return (
     <div>Rittenkaarten</div>
   )
 }
-
-export default Rittenkaarten
