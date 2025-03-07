@@ -12,12 +12,12 @@ export const ShopPageNav = () => {
     { path: '/shop/abonnementen', label: 'Abonnementen' },
     { path: '/shop/rittenkaarten', label: 'Rittenkaarten' },
     { path: '/shop/artikelen', label: 'Artikelen' },
-    { path: '/shop/kortingscodes', label: 'Kortingscodes' }
+    { path: '/shop/discount-codes', label: 'Kortingscodes' }
   ];
 
   // Check if current path matches the item
   const isActive = (path) => {
-    if (path === '/shop/kortingscodes') {
+    if (path === '/shop/discount-codes') {
       return location.pathname.startsWith(path);
     }
     return location.pathname === path || 
@@ -56,8 +56,8 @@ export const ShopPageNav = () => {
             <li key={index} className="nav-item">
               <Link
                 to={item.path}
-                className={`nav-link fw-bold text-black ${isActive(item.path) ? 'active-link' : ''} ${item.isFirst ? 'ps-0' : ''}`}
-              >
+                className={`nav-link fw-bold text-black ${isActive(item.path) ? 'active-link' : ''} ${item.isFirst && !isActive(item.path) ? 'ps-0' : ''}`}
+                >
                 {item.label}
               </Link>
             </li>

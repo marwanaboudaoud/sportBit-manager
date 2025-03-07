@@ -22,9 +22,9 @@ export const DiscountTypeForm = ({
             </select>
         </div>
         {discountType === "Bedrag" ? (
-            <div className="d-flex justify-content-between">
-                <label className="fw-bold">Kortingsbedrag</label>
-                <div className="d-flex align-items-center discount-input-container">
+            <div className="d-flex ">
+                <label className="fw-bold me-3">Kortingsbedrag</label>
+                <div className="d-flex align-items-center ms-5">
                     <input
                         type="number"
                         className={`form-control me-2 first-number-input ${errors.discountValue ? 'is-invalid' : ''}`}

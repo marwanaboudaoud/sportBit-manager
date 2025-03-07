@@ -1,4 +1,4 @@
-.korting-cards-container {
+.discounts-cards-container {
     padding: 39px 47px 26px 41px;
     text-align: center;
     display: flex;
@@ -58,14 +58,14 @@
 }
 
 @media screen and ($xl-reverse) {
-    .korting-cards-container > div {
+    .discounts-cards-container > div {
         flex: 1 1 calc(50% - 0.5rem);
         max-width: calc(50% - 0.5rem);
     }
 }
 
 @media screen and ($lg-reverse) {
-    .korting-cards-container > div {
+    .discounts-cards-container > div {
         flex: 1 1 100%;
         max-width: 100%;
     }

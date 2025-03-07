@@ -6,7 +6,7 @@ import {ShopPageNav} from '../components/shopPage/ShopPageNav';
 import {Productgroepen} from '../components/shopPage/Productgroeps';
 import {Abonnementen} from '../components/shopPage/Subscriptions';
 import {Artikelen} from '../components/shopPage/Articles';
-import {Kortingscodes} from '../components/shopPage/DiscountCodesPage/DiscountsCodes';
+import {DiscountsCodes} from '../components/shopPage/DiscountCodesPage/DiscountsCodes';
 import {Rittenkaarten} from '../components/shopPage/TravelCards';
 import {InsertDiscountCode} from '../components/shopPage/DiscountCodesPage/InsertDiscountCode';
 
@@ -38,8 +38,8 @@ export const ShopPage = () => {
                     <Route path="abonnementen" element={<Abonnementen />} />
                     <Route path="rittenkaarten" element={<Rittenkaarten />} />
                     <Route path="artikelen" element={<Artikelen />} />
-                    <Route path="kortingscodes" element={<Kortingscodes />} />
-                    <Route path="kortingscodes/new" element={<InsertDiscountCode />} />
+                    <Route path="discount-codes" element={<DiscountsCodes/>} />
+                    <Route path="discount-codes/new" element={<InsertDiscountCode />} />
                 </Routes>
             </div>
         </div>

@@ -1,16 +1,18 @@
 .sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 137px;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     padding-top: 63px;
+    padding-bottom: 20px;
     border-right: 1px $gray-muted solid;
+    box-sizing: border-box;
+    margin-top: -63px;
 
     .active-link {
         background-color: $primary;
     }
-
+    
     li {
         font-weight: 700;
         font-size: 12px;
@@ -20,5 +22,13 @@
         a {
             border-radius: 4px
         }
+    }
+
+    .logo-container {
+        img {
+            width: 90px;
+            height: 89px;
+        }
+        margin-bottom: 67px;
     }
 }

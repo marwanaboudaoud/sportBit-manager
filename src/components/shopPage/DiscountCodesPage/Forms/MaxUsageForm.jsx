@@ -8,10 +8,9 @@ export const MaxUsageForm = ({
     errors
 }) => (
     <div className="border rounded settings-forms">
-        <div className="d-flex justify-content-between">
-            
+        <div className="d-flex">
             <label className="fw-bold">Maximumgebruik</label>
-            <div className="Maximum-usage-checkbox-container">
+            <div className="ms-5">
             <input
                 className="form-check-input me-3 checkbox"
                 type="checkbox"
