@@ -56,7 +56,7 @@ export const ShopPageNav = () => {
             <li key={index} className="nav-item">
               <Link
                 to={item.path}
-                className={`nav-link fw-bold text-black ${isActive(item.path) ? 'active-link' : ''} ${item.isFirst && !isActive(item.path) ? 'ps-0' : ''}`}
+                className={`nav-link text-black roboto-bold ${isActive(item.path) ? 'active-link' : ''} ${item.isFirst && !isActive(item.path) ? 'ps-0' : ''}`}
                 >
                 {item.label}
               </Link>

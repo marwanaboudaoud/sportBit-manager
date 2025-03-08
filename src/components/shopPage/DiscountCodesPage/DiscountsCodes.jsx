@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
-import {DiscountsCards} from '../DiscountCard';
+import { faSearch, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { DiscountsCards } from './DiscountCard';
 import { Link } from 'react-router-dom';
 import { DiscountCodesData } from './discountscodesData';
 
 
-export const DiscountsCodes= () => {
+export const DiscountsCodes = () => {
     const [showInactive, setShowInactive] = useState(false);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [activeSearchTerm, setActiveSearchTerm] = useState('');
     const [sortOption, setSortOption] = useState('');
-   
+
     const [cardsData, setCardsData] = useState(DiscountCodesData);
 
     let filteredCards = cardsData.filter(card =>
@@ -21,9 +21,11 @@ export const DiscountsCodes= () => {
 
     if (activeSearchTerm.trim() !== '') {
         filteredCards = filteredCards.filter(card =>
-            card.title.toLowerCase().includes(activeSearchTerm.toLowerCase())
+            card.title.toLowerCase().includes(activeSearchTerm.toLowerCase()) ||
+            (card.dealName && card.dealName.toLowerCase().includes(activeSearchTerm.toLowerCase()))
         );
     }
+
 
     if (sortOption === 'date') {
         filteredCards = [...filteredCards].sort((a, b) => {
@@ -40,7 +42,7 @@ export const DiscountsCodes= () => {
             a.title.localeCompare(b.title)
         );
     }
-   
+
     const handleDelete = (id) => {
         console.log(`Deleting card with ID: ${id}`);
         setCardsData(prevCards => prevCards.filter(card => card.id !== id));
@@ -55,7 +57,12 @@ export const DiscountsCodes= () => {
     };
 
     const handleSearchChange = (e) => {
-        setSearchKeyword(e.target.value);
+        const newSearchValue = e.target.value;
+        setSearchKeyword(newSearchValue);
+
+        if (newSearchValue.trim() === '') {
+            setActiveSearchTerm('');
+        }
     };
 
     const handleSearchClick = () => {
@@ -66,33 +73,38 @@ export const DiscountsCodes= () => {
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            handleSearchClick(); 
+            handleSearchClick();
         }
     };
 
     return (
         <div className="discount-codes-container">
             <div className="discount-codes-wrapper">
-                <h4 className="discount-codes-title fw-bold">
-                    DiscountsCodesoverzicht
+                <h4 className="discount-codes-title roboto-bold mb-4">
+                    Kortingscodes overzicht
                 </h4>
-                <p className="discount-codes-description mb-3">
-                    In deze module kun je DiscountsCodesmaken en zelf kiezen waar (potentiële) leden ze voor kunnen gebruiken.
+                <p className="discount-codes-description roboto-regular mb-3">
+                    In deze module kun je kortingscodes maken en zelf kiezen waar (potentiële) leden ze voor kunnen gebruiken.
                     <br />Bijvoorbeeld een kortingscode voor nieuwe leden die hun proefleskosten kunnen terugverdienen.
                 </p>
                 <hr className="mb-4" />
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="discount-codes-form-container d-flex flex-wrap align-items-center">
                         <div className="discount-codes-select-container mb-3 mb-xl-0">
+                        <div className="custom-select-wrapper">
                             <select
                                 className="form-select custom-select-input"
                                 value={sortOption}
                                 onChange={handleSortChange}
                             >
-                                <option value="">Selecteer sorteeroptie</option>
+                                <option value="">Sorteer</option>
                                 <option value="title">Sorteer op titel</option>
                                 <option value="date">Sorteer op geldig van datum</option>
                             </select>
+                            <div className="select-icon">
+                                <FontAwesomeIcon icon={faCaretDown} />
+                            </div>
+                            </div>
                         </div>
                         <div className="discount-codes-search-container mb-3 mb-xl-0">
                             <div className="input-group">
@@ -102,7 +114,7 @@ export const DiscountsCodes= () => {
                                     placeholder="Zoek op trefwoord"
                                     value={searchKeyword}
                                     onChange={handleSearchChange}
-                                    onKeyDown={handleKeyDown} 
+                                    onKeyDown={handleKeyDown}
                                 />
                                 <button
                                     className="button button-primary search-button"
@@ -123,7 +135,7 @@ export const DiscountsCodes= () => {
                                     checked={showInactive}
                                     onChange={handleShowInactiveChange}
                                 />
-                                <label className="form-check-label" htmlFor="showInactiveCheckbox">
+                                <label className="form-check-label roboto-regular" htmlFor="showInactiveCheckbox">
                                     Toon <span className="text-decoration-underline">ook </span>inactieve kortingscodes
                                 </label>
                             </div>

@@ -16,18 +16,12 @@ export const ShopPage = () => {
             <div className='d-flex align-items-center'>
                 <FontAwesomeIcon
                     icon={faCartShopping}
-                    style={{
-                        width: '30px',
-                        height: '27px'
-                    }}
-                    className="me-3 mb-2"
+                    className="me-3 mb-2 shop-logo"
                 />
-                <h2> Shop</h2>
+                <h2 className='roboto-bold'> Shop</h2>
             </div>
 
-            <hr className="mt-2" style={{
-                height: "20px",
-            }} />
+            <hr className="mt-2 mb-4" />
 
             <ShopPageNav />
 

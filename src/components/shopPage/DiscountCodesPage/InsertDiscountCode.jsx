@@ -63,9 +63,6 @@ export const InsertDiscountCode = () => {
             if (!discountValue || discountValue <= 0) {
                 newErrors.discountValue = "Voer een geldig bedrag in";
             }
-            if (!discountCents && discountCents !== 0) {
-                newErrors.discountCents = "Voer geldige centen in";
-            }
         } else {
             if (!discountValue || discountValue <= 0 || discountValue > 100) {
                 newErrors.discountValue = "Percentage moet tussen 1 en 100 zijn";
@@ -80,8 +77,9 @@ export const InsertDiscountCode = () => {
             newErrors.validTo = "Einddatum moet na startdatum liggen";
         }
         
+
         if (maxUsage && (!maxUsageCount || maxUsageCount < 1)) {
-            newErrors.maxUsageCount = "Voer een geldig aantal in";
+            newErrors.maxUsageCount = "Aantal moet groter zijn dan 0";
         }
         
         setErrors(newErrors);
@@ -116,11 +114,11 @@ export const InsertDiscountCode = () => {
     };
 
     return (
-        <div className="mt-4 insert-discount-code">
+        <div className="mt-4 insert-discount-code ">
             <div className="title-container">
-                <h2 className="fw-bold">Kortingscode toevoegen</h2>
+                <h2 className="roboto-bold">Kortingscode toevoegen</h2>
             </div>
-            <form className="p-4 mt-4" onSubmit={handleSubmit}>
+            <form className="px-5 mt-4" onSubmit={handleSubmit}>
                 <div className="row">
                     <InformationSection
                         discountCode={discountCode}
@@ -135,7 +133,7 @@ export const InsertDiscountCode = () => {
                     <div className="col-12 col-xl-5 settings-forms-container mt-4 mt-xl-0">
                         <div className="d-flex align-items-center settings-header">
                             <FontAwesomeIcon icon={faSlidersH} className="header-icons" />
-                            <h5 className="fw-bold mb-0">Instellingen</h5>
+                            <h5 className="roboto-bold mb-0">Instellingen</h5>
                         </div>
                         <DiscountTypeForm 
                             discountType={discountType} 
@@ -154,7 +152,7 @@ export const InsertDiscountCode = () => {
                             errors={errors}
                         />
                         <MaxUsageForm 
-                            maxUsage={maxUsage} 
+                            maxUsage={maxUsage}     
                             setMaxUsage={setMaxUsage}
                             maxUsageCount={maxUsageCount}
                             setMaxUsageCount={setMaxUsageCount}
@@ -177,7 +175,7 @@ export const InsertDiscountCode = () => {
                         type="submit"
                         disabled={isSubmitting}
                     >
-                        <span className='search-text'>
+                        <span>
                             {isSubmitting ? 'Bezig met opslaan...' : 'Opslaan'}
                         </span>
                     </button>

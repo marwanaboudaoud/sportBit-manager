@@ -50,12 +50,38 @@
         .discount-codes-select-container,
         .discount-codes-search-container,
         .discount-codes-checkbox-container,
-        .discount-codes-button-container{
+        .discount-codes-button-container {
             @media (max-width: 1200px) {
                 width: 100%;
             }
         }
 
+        .custom-select-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+
+            .custom-select-input {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 100%;
+                padding-right: 2.5rem;
+            }
+
+            .select-icon {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                height: 26px;
+            }
+        }
+
+        .custom-select-input::-ms-expand {
+            display: none;
+        }
 
         .custom-select-input {
             width: 100%;
@@ -113,12 +139,11 @@
 
         .search-text {
             font-size: 14px;
-            font-weight: bold;
         }
 
         .form-check-label {
             font-size: 15px;
-            font-weight: 500;
+            margin-top: 6px;
         }
 
         .custom-checkbox {

@@ -1,0 +1,31 @@
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-family: 'Roboto-Regular', sans-serif; 
+  opacity: 1; 
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+  font-family: 'Roboto-Regular', sans-serif;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+
+select:invalid,
+select option[value=""] {
+  font-family: 'Roboto-Regular', sans-serif;
+}

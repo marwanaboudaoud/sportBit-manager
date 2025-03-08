@@ -1,9 +1,12 @@
 .insert-discount-code {
     border: 1px solid $gray-muted;
+    border-bottom: none;
+    border-radius: 4px;
 
     .title-container {
         background-color: $gray-cool;
-        padding: 45px 41px;
+        padding: 43px 41px;
+  
     }
 
     .information-header,
@@ -84,6 +87,7 @@
     }
 
     .settings-forms-container {
+        
         width: 539px;
     }
 
@@ -96,7 +100,44 @@
             margin-bottom: 22px;
         }
 
+        .custom-select-wrapper {
+            position: relative;
+            display: inline-block;
 
+            .custom-select-input {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 100%;
+                padding-right: 2.5rem;
+            }
+
+            .select-icon {
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                height: 26px;
+            }
+        }
+
+        .custom-select-input::-ms-expand {
+            display: none;
+        }
+
+        .optional{
+            color: $black-transparent-40;
+            font-family:roboto-italic;
+        }
+
+        .form-control.is-invalid, .was-validated .form-control:invalid {
+            padding-right: calc(1rem + .75rem);
+        }
+
+        input[type=date][value=""]::-webkit-datetime-edit {
+            color: transparent;
+        }
     }
 
     .information-form {
@@ -104,6 +145,26 @@
 
         input {
             margin-bottom: 10px;
+        }
+
+        textarea::placeholder {
+            font-family: Roboto-Italic;
+            font-size: 14px;
+        }
+
+        textarea::-moz-placeholder {
+            font-family: Roboto-Italic;
+            font-size: 14px;
+        }
+
+        textarea:-ms-input-placeholder {
+            font-family: Roboto-Italic;
+            font-size: 14px;
+        }
+
+        textarea::-ms-input-placeholder {
+            font-family: Roboto-Italic;
+            font-size: 14px;
         }
     }
 
@@ -116,7 +177,6 @@
         opacity: 0.7;
         white-space: pre-line;
     }
-    
 
     .checkbox {
         appearance: none;
@@ -131,6 +191,7 @@
         background-color: black;
         border-color: black;
     }
+
     .refresh-icon-container {
         top: 4px;
         right: 8px;
@@ -140,9 +201,11 @@
             height: 12px;
         }
     }
+
     .cancel-button {
         text-decoration: none;
     }
+
     .button {
         padding: 14px 36px;
     }

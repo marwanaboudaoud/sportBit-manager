@@ -46,11 +46,11 @@ export const Sidebar = () => {
           <li key={item.path}>
             <Link 
               to={item.path} 
-              className={`d-flex flex-column align-items-center p-3 text-black text-decoration-none ${isActive(item.path) ? 'active-link' : ''}`}
+              className={`d-flex flex-column align-items-center p-3 text-black text-decoration-none roboto-bold ${isActive(item.path) ? 'active-link' : ''}`}
             >
               <FontAwesomeIcon 
                 icon={item.icon} 
-                className="me-3 mb-2" 
+                className="mb-2" 
                 style={{ 
                   width: item.iconWidth, 
                   height: item.iconHeight 
