@@ -8,28 +8,26 @@ export const MaxUsageForm = ({
     errors
 }) => (
     <div className="border rounded settings-forms">
-        <div className="d-flex justify-content-between">
-            
-            <label className="fw-bold">Maximumgebruik</label>
-            <div className="Maximum-usage-checkbox-container">
+        <div className="d-flex">
+            <label className="roboto-bold">Maximumgebruik</label>
+            <div className="ms-5">
             <input
-                className="form-check-input me-3 checkbox"
+                className="form-check-input me-2 checkbox"
                 type="checkbox"
                 checked={maxUsage}
                 onChange={() => setMaxUsage(!maxUsage)}
             />
-            Ja
+            <span className="roboto-regular">Ja</span>
             </div>
         </div>
         {maxUsage && (
             <div className="d-flex">
-                <label className="fw-bold">Aantal keer te gebruiken</label>
+                <label className="roboto-bold">Aantal keer te gebruiken</label>
                 <div>
                     <input 
                         type="number" 
                         className={`form-control number-of-use-input ${errors.maxUsageCount ? 'is-invalid' : ''}`} 
                         placeholder="0" 
-                        min={1}
                         value={maxUsageCount}
                         onChange={(e) => setMaxUsageCount(e.target.value)} 
                     />

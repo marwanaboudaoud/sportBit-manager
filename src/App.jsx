@@ -12,7 +12,7 @@ function App() {
         <div className="d-flex">
           <Sidebar />
           <div className="content-wrapper" >
-            <div className="content p-4">
+            <div className="content">
               <AppRoutes />
             </div>
           </div>

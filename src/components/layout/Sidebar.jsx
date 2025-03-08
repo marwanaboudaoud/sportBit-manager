@@ -10,6 +10,8 @@ import {
   faWarehouse, 
   faCalendarDays 
 } from '@fortawesome/free-solid-svg-icons';
+import sportLogo from '../../assets/images/sport.png'; 
+
 
 export const Sidebar = () => {
   const location = useLocation();
@@ -32,16 +34,23 @@ export const Sidebar = () => {
 
   return (
     <div className="sidebar bg-white text-black">
+       <div className="logo-container text-center">
+        <img 
+          src={sportLogo} 
+          alt="SportLogo" 
+          className="sidebar-logo img-fluid" 
+        />
+      </div>
       <ul className="list-unstyled">
         {navItems.map((item) => (
           <li key={item.path}>
             <Link 
               to={item.path} 
-              className={`d-flex flex-column align-items-center p-3 text-black text-decoration-none ${isActive(item.path) ? 'active-link' : ''}`}
+              className={`d-flex flex-column align-items-center p-3 text-black text-decoration-none roboto-bold ${isActive(item.path) ? 'active-link' : ''}`}
             >
               <FontAwesomeIcon 
                 icon={item.icon} 
-                className="me-3 mb-2" 
+                className="mb-2" 
                 style={{ 
                   width: item.iconWidth, 
                   height: item.iconHeight 

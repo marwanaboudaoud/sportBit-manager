@@ -1,5 +1,63 @@
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
-@import '@fontsource/roboto/400-italic.css';
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../../typography/Roboto-Bold.ttf");
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Roboto-ExtraBold";
+    src: url("../../typography/Roboto-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../../typography/Roboto-Regular.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("../../typography/Roboto-Medium.ttf");
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Roboto-Italic";
+    src: url("../../typography/Roboto-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Rockwell-Normal";
+    src: url("../../typography/Rockwell-Normal.TTF");
+    font-style: normal;
+}
+
+
+
+
+.roboto-regular{
+    font-family: Roboto-Regular;
+}
+
+.roboto-extraBold{
+    font-family: Roboto-ExtraBold;
+}
+
+.Roboto-Medium{
+    font-family: Roboto-Medium;
+}
+
+.roboto-bold{
+    font-family: Roboto-Bold;
+}
+
+.roboto-italic{
+    font-family: Roboto-Italic;
+}
+
+.rockwell-normal{
+    font-family: Rockwell-Normal;
+}
+

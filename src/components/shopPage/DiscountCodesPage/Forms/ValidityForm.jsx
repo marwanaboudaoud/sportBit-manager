@@ -9,7 +9,7 @@ export const ValidityForm = ({
 }) => (
     <div className="border rounded settings-forms">
         <div className="d-flex justify-content-between">
-            <label className="fw-bold">Geldig van datum</label>
+            <label className="roboto-bold">Geldig van datum</label>
             <div>
                 <input 
                     type="date" 
@@ -21,7 +21,7 @@ export const ValidityForm = ({
             </div>
         </div>
         <div className="d-flex justify-content-between">
-            <label className="fw-bold">Geldig tot datum<br /> <span className="optional">(optioneel)</span></label>
+            <label className="roboto-bold">Geldig tot datum<br /> <span className="optional">(optioneel)</span></label>
             <div>
                 <input 
                     type="date" 

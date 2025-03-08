@@ -1,11 +1,11 @@
 .content-wrapper {
-    margin-left: 130px;
-    width: calc(100% - 211px);
+    margin-top: 78px;
+    width: calc(100% - 73px);
+    padding-bottom: 112px;
+    padding-right: 10px;
+    padding-left: 10px;
     @media screen and ($xl) {
     padding-right: 80px;
-    margin-left: 211px;
+    margin-left: 73px
     }
 }
-body {
-    font-family: 'Roboto', sans-serif;
-  }

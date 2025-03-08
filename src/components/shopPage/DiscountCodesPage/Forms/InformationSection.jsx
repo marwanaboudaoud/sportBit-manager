@@ -15,10 +15,10 @@ export const InformationSection = ({
     <div className="col-12 col-xl-5 pe-md-4 information-form">
         <div className="d-flex align-items-center information-header">
             <FontAwesomeIcon icon={faInfoCircle} className="header-icons" />
-            <h5 className="fw-bold mb-0">Informatie</h5>
+            <h5 className="roboto-bold mb-0">Informatie</h5>
         </div>
         <div className="d-flex align-items-center justify-content-between">
-            <label className="fw-bold">Titel</label>
+            <label className="roboto-bold">Titel</label>
             <div className="input-wrapper">
                 <input 
                     type="text" 
@@ -30,7 +30,7 @@ export const InformationSection = ({
             </div>
         </div>
         <div className="d-flex align-items-center justify-content-between position-relative">
-            <label className="fw-bold">Code</label>
+            <label className="roboto-bold">Code</label>
             <div className="input-wrapper position-relative">
                 <input
                     type="text"
@@ -45,10 +45,10 @@ export const InformationSection = ({
             </div>
         </div>
         <div className="d-flex align-items-start justify-content-between">
-            <label className="fw-bold">Omschrijving</label>
+            <label className="roboto-bold">Omschrijving</label>
             <div className="input-wrapper">
                 <textarea
-                    className={`form-control placeholder-italic ${errors.description ? 'is-invalid' : ''}`}
+                    className={`form-control ${errors.description ? 'is-invalid' : ''}`}
                     rows="3"
                     placeholder="Omschrijf hier de kortingsactie. 
                              Waar is de korting voor bedoeld?"

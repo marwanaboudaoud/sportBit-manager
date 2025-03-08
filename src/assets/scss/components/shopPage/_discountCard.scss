@@ -1,4 +1,4 @@
-.korting-cards-container {
+.discounts-cards-container {
     padding: 39px 47px 26px 41px;
     text-align: center;
     display: flex;
@@ -12,6 +12,7 @@
 
     .card-body {
         padding: 54px 37px 0px 37px;
+        margin: auto;
 
         .badge {
             padding: 4px 11px;
@@ -32,6 +33,10 @@
         .deal-name {
             font-size: 16px;
         }
+        .deal-value{
+            color: $black;
+            opacity: 0.7;
+        }
 
         p {
             font-size: 12px;
@@ -48,24 +53,25 @@
 
     h5 {
         font-size: 27px;
+        width: fit-content;
         background: $gray-light 0% 0% no-repeat padding-box;
         border: 2px dashed $black-translucent;
         border-radius: 4px;
-        padding: 12px 24px
+        padding: 6px 20px
     }
 
     
 }
 
 @media screen and ($xl-reverse) {
-    .korting-cards-container > div {
+    .discounts-cards-container > div {
         flex: 1 1 calc(50% - 0.5rem);
         max-width: calc(50% - 0.5rem);
     }
 }
 
 @media screen and ($lg-reverse) {
-    .korting-cards-container > div {
+    .discounts-cards-container > div {
         flex: 1 1 100%;
         max-width: 100%;
     }

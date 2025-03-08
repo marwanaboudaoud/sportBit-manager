@@ -23,7 +23,7 @@ export const DiscountCodesData = [
         expiryLabel: "tot",
         expiryDate: "21-12-2024",
         dealName: "Herfstdeal",
-        discount: "€20 Korting",
+        discount: "20% Korting",
     },
     {
         id: 4,
@@ -32,8 +32,8 @@ export const DiscountCodesData = [
         startDate: "21-06-2023",
         expiryLabel: "tot",
         expiryDate: "21-12-2024",
-        dealName: "Herfstdeal",
-        discount: "€20 Korting",
+        dealName: "Voorbeeld 4",
+        discount: "20% Korting",
     }
 ];
 

@@ -4,7 +4,7 @@ import { faUser, faCircleQuestion, faGift, faBullhorn } from '@fortawesome/free-
 
 export const NavItem = ({ icon, text, href = '/', hasMargin = true }) => (
     <li className="nav-item">
-        <a className="nav-link text-white" href={href}>
+        <a className="nav-link text-white Roboto-Medium" href={href}>
             <FontAwesomeIcon 
                 icon={icon} 
                 className={`nav-icon ${hasMargin && text ? 'me-3' : ''}`} 
