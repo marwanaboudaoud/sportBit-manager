@@ -54,7 +54,7 @@ export const DiscountTypeForm = ({
                         placeholder="00"
                         max={99}
                         min={0}
-                        value={discountCents === '' ? '0' : discountCents}
+                        value={discountCents === '' ? '00' : discountCents}
                         onChange={(e) => setDiscountCents(e.target.value)}
                         onBlur={(e) => {
                             if (e.target.value === '') {
@@ -64,7 +64,7 @@ export const DiscountTypeForm = ({
                     />
 
                     {(errors.discountValue || errors.discountCents) &&
-                        <div className="invalid-feedback d-block ms-2">
+                        <div className="invalid-feedback d-block ms-2 mb-2">
                             {errors.discountValue || errors.discountCents}
                         </div>
                     }
