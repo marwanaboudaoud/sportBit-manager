@@ -11,29 +11,27 @@ export const DiscountCodesData = [
     {
         id: 2,
         title: "LENTE20",
-        badge: { text: "VERLOPEN", variant: "danger" },
+        badge: { text: "VERLOPEN", variant: "red" },
         dealName: "Lentedeal",
         discount: "€20 Korting",
     },
     {
         id: 3,
         title: "HERFST2023",
-        badge: { text: "ACTIEF", variant: "success" },
         startDate: "10-10-2024",
         expiryLabel: "tot",
         expiryDate: "21-12-2024",
         dealName: "Herfstdeal",
-        discount: "20% Korting",
+        discount: "€20 Korting",
     },
     {
         id: 4,
         title: "QMNL10!",
-        badge: { text: "ACTIEF", variant: "success" },
         startDate: "21-06-2023",
         expiryLabel: "tot",
         expiryDate: "21-12-2024",
-        dealName: "Voorbeeld 4",
-        discount: "20% Korting",
+        dealName: "Herfstdeal",
+        discount: "€20 Korting",
     }
 ];
 

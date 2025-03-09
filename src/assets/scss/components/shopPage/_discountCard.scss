@@ -7,7 +7,7 @@
     .card {
         width: 295px;
         height: 261px;
-        border: 1px solid #0000003B;
+        border: 1px solid $black-transparent-23;
     }
 
     .card-body {
@@ -26,14 +26,15 @@
     }
 
     .card-footer-custom {
-        background-color: #EDEDED;
-        border: 1px solid #DCDCDC;
+        background-color: $gray-warm;
+        border: 1px solid $gray-muted;
         margin-top: auto;
 
         .deal-name {
             font-size: 16px;
         }
-        .deal-value{
+
+        .deal-value {
             color: $black;
             opacity: 0.7;
         }
@@ -43,10 +44,10 @@
         }
 
         .trash-button {
-            color: $black; 
-            
+            color: $black;
+
             &:hover {
-                color: $red; 
+                color: $red;
             }
         }
     }
@@ -59,19 +60,17 @@
         border-radius: 4px;
         padding: 6px 20px
     }
-
-    
 }
 
 @media screen and ($xl-reverse) {
-    .discounts-cards-container > div {
+    .discounts-cards-container>div {
         flex: 1 1 calc(50% - 0.5rem);
         max-width: calc(50% - 0.5rem);
     }
 }
 
 @media screen and ($lg-reverse) {
-    .discounts-cards-container > div {
+    .discounts-cards-container>div {
         flex: 1 1 100%;
         max-width: 100%;
     }

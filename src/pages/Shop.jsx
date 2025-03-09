@@ -20,11 +20,8 @@ export const ShopPage = () => {
                 />
                 <h2 className='roboto-bold'> Shop</h2>
             </div>
-
             <hr className="mt-2 mb-4" />
-
             <ShopPageNav />
-
             <div className="mt-4">
                 <Routes>
                     <Route path="/" element={<Navigate to="productgroepen" replace />} />

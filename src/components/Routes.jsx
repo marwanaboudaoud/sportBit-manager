@@ -9,7 +9,7 @@ export const AppRoutes = () => {
             <Route path="/" element={<ManagementPage />} />
             <Route path="/management" element={<ManagementPage />} />
             <Route path="/administration" element={<AdministrationPage />} />
-            <Route path="/shop/*" element={<ShopPage />} /> {/* Note the /* for nested routes */}
+            <Route path="/shop/*" element={<ShopPage />} />
         </Routes>
     );
 };

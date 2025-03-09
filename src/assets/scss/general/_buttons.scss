@@ -6,7 +6,6 @@
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 4px;
     font-family: Roboto-Bold;
-    
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

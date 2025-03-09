@@ -17,7 +17,7 @@
 
         .discount-codes-title {
             font-size: 21px;
-            color: black;
+            color: $black;
         }
 
         .form-select {
@@ -101,13 +101,13 @@
         }
 
         select option {
-            color: black;
+            color: $black;
         }
 
         .custom-search-input {
             width: calc(100% - 80px);
             height: 50px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
+            background: $white 0% 0% no-repeat padding-box;
             border: 1px solid $gray-muted;
             border-radius: 4px;
             opacity: 1;
@@ -122,7 +122,6 @@
                 width: 215px;
             }
         }
-
 
         .discount-codes-search-container .input-group {
             flex-wrap: nowrap !important;
@@ -154,19 +153,19 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 background: $white;
-                border: 1px solid #3E3E3E;
+                border: 1px solid $gray-darker;
                 border-radius: 4px;
                 cursor: pointer;
 
                 &:checked {
-                    background-color: #5D5D5D;
+                    background-color: $gray-medium;
                     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
                     background-position: center;
                     background-repeat: no-repeat;
                 }
 
                 &:focus {
-                    border-color: #3E3E3E;
+                    border-color: $gray-darker;
                     box-shadow: none;
                     outline: none;
                 }

@@ -8,12 +8,11 @@ import {
     DiscountTypeForm,
     ValidityForm,
     MaxUsageForm
-} from './Forms';
+} from './InsertCodesForms';
 
 export const InsertDiscountCode = () => {
     const navigate = useNavigate();
     
-    // Form state
     const [title, setTitle] = useState("");
     const [discountCode, setDiscountCode] = useState("");
     const [description, setDescription] = useState("");

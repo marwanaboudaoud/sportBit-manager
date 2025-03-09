@@ -6,7 +6,6 @@
     .title-container {
         background-color: $gray-cool;
         padding: 43px 41px;
-  
     }
 
     .information-header,
@@ -87,7 +86,6 @@
     }
 
     .settings-forms-container {
-        
         width: 539px;
     }
 
@@ -126,12 +124,13 @@
             display: none;
         }
 
-        .optional{
+        .optional {
             color: $black-transparent-40;
-            font-family:roboto-italic;
+            font-family: roboto-italic;
         }
 
-        .form-control.is-invalid, .was-validated .form-control:invalid {
+        .form-control.is-invalid,
+        .was-validated .form-control:invalid {
             padding-right: calc(1rem + .75rem);
         }
 

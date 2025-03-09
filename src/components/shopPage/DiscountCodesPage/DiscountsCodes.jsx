@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { DiscountsCards } from './DiscountCard';
+import { DiscountsCards } from './Cards/DiscountCard';
 import { Link } from 'react-router-dom';
 import { DiscountCodesData } from './discountscodesData';
 

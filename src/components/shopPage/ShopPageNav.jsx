@@ -6,7 +6,6 @@ export const ShopPageNav = () => {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 920);
 
-  // Navigation items configuration
   const navItems = [
     { path: '/shop/productgroepen', label: 'Productgroepen', isFirst: true },
     { path: '/shop/abonnementen', label: 'Abonnementen' },
@@ -15,7 +14,6 @@ export const ShopPageNav = () => {
     { path: '/shop/discount-codes', label: 'Kortingscodes' }
   ];
 
-  // Check if current path matches the item
   const isActive = (path) => {
     if (path === '/shop/discount-codes') {
       return location.pathname.startsWith(path);
@@ -24,7 +22,6 @@ export const ShopPageNav = () => {
           (location.pathname === '/shop' && path === '/shop/productgroepen');
   };
 
-  // Handle window resize for responsive behavior
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 920);
@@ -36,12 +33,10 @@ export const ShopPageNav = () => {
     };
   }, []);
 
-  // Handle dropdown selection change
   const handleSelectChange = (e) => {
     navigate(e.target.value);
   };
 
-  // Find the current active path for default dropdown value
   const getCurrentPath = () => {
     const activeItem = navItems.find(item => isActive(item.path));
     return activeItem ? activeItem.path : navItems[0].path;

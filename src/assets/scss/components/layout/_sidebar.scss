@@ -12,23 +12,24 @@
     .active-link {
         background-color: $primary;
     }
-    
+
     li {
         font-weight: 700;
         font-size: 12px;
         margin-bottom: 4px;
         padding: 0 12px;
-        
+
         a {
             border-radius: 4px;
         }
     }
 
     .logo-container {
+        margin-bottom: 67px;
+
         img {
             width: 64px;
             height: 89px;
         }
-        margin-bottom: 67px;
     }
 }
